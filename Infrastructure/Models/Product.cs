@@ -5,7 +5,7 @@ namespace Infrastructure.Models;
 
 public partial class Product
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = Guid.NewGuid().ToString();
 
     public string? Name { get; set; }
 
@@ -13,9 +13,9 @@ public partial class Product
 
     public string? Long_description { get; set; }
 
-    public int? Category_id { get; set; }
+    public string? Category_id { get; set; }
 
-    public byte[] Created_at { get; set; } = null!;
+    public DateTime? Created_at { get; set; } 
 
     public bool? IsTopseller { get; set; }
 

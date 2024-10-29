@@ -52,7 +52,7 @@ public partial class ApplicationDbContext : DbContext
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Hexadecimal_color)
-                .HasMaxLength(6)
+                .HasMaxLength(7)
                 .IsUnicode(false);
             entity.Property(e => e.Name).HasMaxLength(255);
         });
@@ -62,7 +62,7 @@ public partial class ApplicationDbContext : DbContext
             entity.HasKey(e => e.Id).HasName("PK__Images__3214EC0707C059CC");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Image_URL).HasMaxLength(255);
+            entity.Property(e => e.Image_URL).HasMaxLength(2048);
 
             entity.HasOne(d => d.Product).WithMany(p => p.Images)
                 .HasForeignKey(d => d.Product_id)

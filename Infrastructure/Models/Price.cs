@@ -5,9 +5,9 @@ namespace Infrastructure.Models;
 
 public partial class Price
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = Guid.NewGuid().ToString();
 
-    public int? Product_id { get; set; }
+    public string? Product_id { get; set; }
 
     public decimal? Price1 { get; set; }
 

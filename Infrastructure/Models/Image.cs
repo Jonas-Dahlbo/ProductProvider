@@ -5,7 +5,7 @@ namespace Infrastructure.Models;
 
 public partial class Image
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = Guid.NewGuid().ToString();
 
     public int? Product_id { get; set; }
 

@@ -5,15 +5,15 @@ namespace Infrastructure.Models;
 
 public partial class Warehouse
 {
-    public int Unique_product_id { get; set; }
+    public string Unique_product_id { get; set; } = Guid.NewGuid().ToString();
 
-    public int? Product_id { get; set; }
+    public string? Product_id { get; set; }
 
-    public int? Color_id { get; set; }
+    public string? Color_id { get; set; }
 
-    public int? Size_id { get; set; }
+    public string? Size_id { get; set; }
 
-    public int? Current_stock { get; set; }
+    public string? Current_stock { get; set; }
 
     public virtual Color? Color { get; set; }
 
